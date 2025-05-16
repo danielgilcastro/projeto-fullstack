@@ -1,1 +1,24 @@
-console.log("Hello, World!");
+
+const botoes = document.querySelectorAll('.add-carrinho');
+const itensCarrinho = document.getElementById('itens-carrinho');
+const total = document.getElementById('total');
+let totalPreco = 0;
+
+
+botoes.forEach((botao) => {
+
+    botao.addEventListener('click', (event) => {
+        const nome = botao.getAttribute('data-name');
+        const preco = parseFloat(botao.getAttribute('data-preco'));
+
+        const li = document.createElement('li');
+        li.textContent = `${nome} - R$ ${preco.toFixed(2)}`;
+        itensCarrinho.appendChild(li);
+
+        totalPreco += preco;
+        total.textContent = totalPreco.toFixed(2);
+    });
+
+})
+
+

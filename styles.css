@@ -12,8 +12,16 @@ header{
     padding: 1em ;
 }
 
+#produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+}
+
 main{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: 1em;
 }
